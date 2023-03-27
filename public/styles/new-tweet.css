@@ -1,0 +1,9 @@
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-tweet #underside {
+  display: flex;
+  justify-content: space-between;
+}
