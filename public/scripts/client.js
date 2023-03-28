@@ -102,17 +102,19 @@ const renderTweets = function(data) {
     const output = 0 + (b.created_at > a.created_at) - (a.created_at > b.created_at);
     return output;
   });
-  tweets.forEach( x => {
+  tweets.forEach(x => {
     $('#tweet-feed').append(createTweetElement(x));
   });
 };
 
+$('#new-tweet-form').submit(function(event) {
+  event.preventDefault();
+  const body = $(this).serialize();
+  $.ajax('/tweets/', { method: 'POST', data: body });
+});
+
 $(document).ready(function() {
 
-  $('#new-tweet-form').submit((event) => {
-    event.preventDefault();
-    
-  });
 
   renderTweets(tweetData);
 });
