@@ -8,6 +8,7 @@ $(document).ready(function() {
   newTweetInput.on('input', function() {
     const charLength = $(this).val().length;
     counter.val(MAX_CHARACTERS - charLength);
+    
     if(counter.val() < 0) {
       counter.addClass('red-text');
     } else {

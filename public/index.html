@@ -53,7 +53,7 @@
   <main class="container">
     <section class="new-tweet">
       <!-- <h2>Compose Tweet</h2> -->
-      <form action="/tweets/" method="POST">
+      <form id="new-tweet-form" action="/tweets/" method="POST">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <footer>
@@ -63,10 +63,11 @@
       </form>
     </section>
     <section id="tweet-feed">
-      <article class="tweet">
+      <!-- TO DO: Get rid of all this.
+         <article class="tweet">
         <header>
           <div><img src="/public/images/icon.png"><span>Name</span></div>
-          <a href="#"><h3>@UserName</h3></a>
+          <h3>@UserName</h3>
         </header>
         <p>If they made tugboats bigger, they could be the boats other boats tug.</p>
         <footer>
@@ -77,7 +78,7 @@
             <a href="#"><i class="fa-solid fa-heart"></i></a><span class="heart-counter">1</span>
           </div>
         </footer>
-      </article>
+      </article> -->
     </section>
   </main>
 </body>

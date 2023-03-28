@@ -11,23 +11,17 @@
 .tweet header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
+}
+.tweet header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.tweet header a {
-  text-decoration: none;
-}
-
-.tweet header a:link, a:visited {
-  color: #320872;
-}
-
-.tweet header  a:hover {
-  color: #6b32bc;
-}
-
-.tweet header  a:active {
-  color: #8753d1;
+.tweet img {
+  max-height: 32px;
+  margin-right: 10px;
 }
 
 .tweet h3, h4 {
