@@ -21,12 +21,28 @@ nav span {
   font-family: 'Bungee', cursive;
 }
 
+nav i {
+  color: tomato;
+}
+
 #call-to-action {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #0000;
+  color: #f4f1ec;
+  border: none;
 }
 
 #call-to-action p {
   margin: 5px;
+}
+
+#call-to-action i {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+#call-to-action:hover {
+  cursor: pointer;
 }

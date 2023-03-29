@@ -1,4 +1,5 @@
 .new-tweet {
+  display: block;
   min-width: 640px;
   padding: 20px;
 }
@@ -69,4 +70,20 @@
 
 .red-text {
   color: tomato;
+}
+
+#post-error {
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  border: 2px dotted darkred;
+  background-color: lightpink;
+  color: darkred;
+}
+
+#post-error p {
+  margin: 0;
+}
+
+.hidden {
+  display:none;
 }

@@ -92,39 +92,61 @@ const renderNewTweet = function(data) {
  * @param {Function} callback 
  */
 const loadTweets = function(callback) {
-  $.get('/tweets', { method: 'GET '}).then(function(data) {
-      callback(data);
-    });
+  $.get('/tweets', { method: 'GET ' }).then(function(data) {
+    callback(data);
+  });
 };
 
 $(document).ready(function() {
-    const COOLDOWN_TIME = 30000;
-    let coolDown = null;
+  const COOLDOWN_TIME = 30000;
+  let coolDown = null;
+  const newTweet = $('.new-tweet');
+  const postError =   $('#post-error');
+
+  /* 
+   * Hide the slide out elements.
+   * Initially, the new tweet element also has a class called 'hidden',
+   * which prevents it from momentarily showing up for a split second right when the page loads.
+   */
+  postError.hide();
+  newTweet.hide();
+  newTweet.removeClass('hidden');
   
-    loadTweets(renderTweets);
 
-  $('#new-tweet-form').submit(function(event) {
+  loadTweets(renderTweets);
+
+  $('#call-to-action').click(() => {
+    postError.slideUp();
+    newTweet.slideToggle(300, () => {
+      newTweet.find('textarea').focus();
+    });
+  });
+
+  newTweet.find('form').submit(function(event) {
     event.preventDefault();
-
     let error = null;
     const textBox = $('#tweet-text');
     const tweetText = textBox.val();
 
-    if(tweetText.length <= 0) {
-      error = "You cannot tweet an empty message, please type something.";
-    }
-
-    if(tweetText.length > MAX_CHARACTERS) {
-      error = "You exceeded your max character allotment. Please shorten your message.";
-    }
-    
     const tooSoonToTweet = COOLDOWN_TIME - (Date.now() - coolDown);
-    if(tooSoonToTweet > 0) {
+    if (tooSoonToTweet > 0) {
       error = `You can only post a new tweet every 30 seconds. Please wait ${Math.ceil(tooSoonToTweet / 1000)} seconds.`;
     }
 
-    if(error) {
-      alert(error);
+    if (tweetText.length <= 0) {
+      error = "You cannot tweet an empty message, please type something.";
+    }
+
+    if (tweetText.length > MAX_CHARACTERS) {
+      error = "You exceeded your max character allotment. Please shorten your message.";
+    }
+
+    postError.slideUp(100, () => {
+      postError.html(`<i class="fa-solid fa-triangle-exclamation"></i> ${error} <i class="fa-solid fa-triangle-exclamation"></i>`);
+    });
+
+    if (error) {
+      postError.slideDown(200);
       return;
     }
 
