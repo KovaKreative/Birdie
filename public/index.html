@@ -34,11 +34,12 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   <script type="text/javascript" src="/scripts/animate-arrows.js"></script>
+  <script type="text/javascript" src="/scripts/composer.js"></script>
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
-  <nav>
+  <nav id="navbar">
     <span>tweeter</span>
     <button id="call-to-action">
         <p><b>Write</b> a new tweet</p>
@@ -89,7 +90,7 @@
       </article> -->
     </section>
   </main>
-  <button id="go-up">
+  <button id="go-up" class="hidden">
     <i class="fa-solid fa-angles-up"></i>
   </button>
 </body>

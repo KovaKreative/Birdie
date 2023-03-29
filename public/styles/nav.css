@@ -15,6 +15,8 @@ nav {
   background: -webkit-linear-gradient(top,  #320872 0%,#6b32bc 100%);
   background: linear-gradient(to bottom,  #320872 0%,#6b32bc 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#320872', endColorstr='#6b32bc',GradientType=0 );  
+  transition-property: height;
+  transition-duration: 0.6s;
 }
 
 nav span {
@@ -45,4 +47,10 @@ nav i {
 
 #call-to-action:hover {
   cursor: pointer;
+}
+
+.retract {
+  height: 60px;
+  transition-property: height;
+  transition-duration: 0.6s;
 }

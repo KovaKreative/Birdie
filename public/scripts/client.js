@@ -101,27 +101,10 @@ $(document).ready(function() {
   const COOLDOWN_TIME = 30000;
   let coolDown = null;
   const newTweet = $('.new-tweet');
-  const postError =   $('#post-error');
-
-  /* 
-   * Hide the slide out elements.
-   * Initially, the new tweet element also has a class called 'hidden',
-   * which prevents it from momentarily showing up for a split second right when the page loads.
-   */
-  postError.hide();
-  newTweet.hide();
-  newTweet.removeClass('hidden');
-  
+  const postError = $('#post-error');
 
   loadTweets(renderTweets);
-
-  $('#call-to-action').click(() => {
-    postError.slideUp();
-    newTweet.slideToggle(300, () => {
-      newTweet.find('textarea').focus();
-    });
-  });
-
+  
   newTweet.find('form').submit(function(event) {
     event.preventDefault();
     let error = null;

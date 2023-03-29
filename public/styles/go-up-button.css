@@ -1,0 +1,17 @@
+#go-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: tomato;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 2px 7px 7px #64B8;
+  font-size: 50px;
+}
+
+#go-up:hover {
+  cursor: pointer;
+}
