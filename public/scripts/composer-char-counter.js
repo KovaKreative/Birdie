@@ -5,8 +5,8 @@ $(document).ready(function() {
   const counter = $('.counter[name=counter]');
   const newTweetInput =  $('.new-tweet textarea');
 
-  newTweetInput.on('input', function() {
-    const charLength = $(this).val().length;
+  const countCharacters = function(inputField) {
+    const charLength = $(inputField).val().length;
     counter.val(MAX_CHARACTERS - charLength);
     
     if(counter.val() < 0) {
@@ -14,6 +14,12 @@ $(document).ready(function() {
     } else {
       counter.removeClass('red-text');
     }
+  };
+
+  countCharacters(newTweetInput);
+
+  newTweetInput.on('input', function() {
+    countCharacters(this);
   });
 
 });
