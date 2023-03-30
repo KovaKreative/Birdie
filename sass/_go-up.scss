@@ -1,0 +1,22 @@
+@use 'variables';
+
+#go-up {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background-color: tomato;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 2px 7px 7px #64B8;
+  font-size: 50px;
+
+  
+  @include variables.action-margin;
+  
+}
+#go-up:hover {
+  cursor: pointer;
+}

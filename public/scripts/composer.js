@@ -4,11 +4,11 @@ $(document).ready(function() {
   const goUpButton = $('#go-up');
   const navButton = $('#call-to-action');
 
-/* 
- * Hide the slide out elements.
- * Initially, the new tweet element also has a class called 'hidden',
- * which prevents it from momentarily showing up for a split second right when the page loads.
- */
+  /* 
+   * Hide the slide out elements.
+   * Initially, the new tweet element also has a class called 'hidden',
+   * which prevents it from momentarily showing up for a split second right when the page loads.
+   */
   postError.hide();
   newTweet.hide();
   goUpButton.hide();
@@ -24,20 +24,21 @@ $(document).ready(function() {
   });
 
   goUpButton.click(() => {
-    $('html, body').animate({ scrollTop: 0 }, 400);
-    newTweet.slideDown(300, () => {
-      newTweet.find('textarea').focus();
+    $('html, body').animate({ scrollTop: 80 }, 500, 'swing', () => {
+      newTweet.slideDown(300, () => {
+        newTweet.find('textarea').focus();
+      });
     });
   });
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 500) {
-      $('#navbar').addClass('retract')
+      $('#navbar').addClass('retract');
       goUpButton.fadeIn(200);
       navButton.fadeOut(200);
     }
-    if ($(this).scrollTop() < 400) {
-      $('#navbar').removeClass('retract')
+    if ($(this).scrollTop() < 500) {
+      $('#navbar').removeClass('retract');
       goUpButton.fadeOut(200);
       navButton.fadeIn(200);
     }

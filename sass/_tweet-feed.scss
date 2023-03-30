@@ -1,0 +1,75 @@
+@use 'variables';
+
+.tweet {
+  border: 5px solid #545149;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+
+  img {
+    max-height: 32px;
+    margin-right: 10px;
+  }
+
+  h3,
+  h4 {
+    margin: 0;
+  }
+
+  p {
+    font-weight: 600;
+    word-break: break-all;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 5px solid variables.$dark-color;
+    padding: 10px;
+    font-size: 20px;
+
+    div {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  i {
+    color: #320872;
+    margin-left: 10px;
+
+  }
+
+  i:hover {
+    color: darkgoldenrod;
+  }
+
+  i:active {
+    color: sienna;
+  }
+}
+
+.tweet:hover {
+  box-shadow: 5px 10px 2px #63E4;
+}
+
+.heart-counter {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}

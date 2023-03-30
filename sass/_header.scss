@@ -1,0 +1,34 @@
+@media only screen and (min-width: 1921px) {
+  #dashboard {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  #dashboard {
+    width: 40%;
+    height: 480px;
+    margin: 150px 50px 0px 50px;
+    padding: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #dashboard {
+    width: 100%;
+    height: 520px;
+    padding-top: 120px;
+  }
+}
+
+
+
+#dashboard {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+}

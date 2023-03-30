@@ -1,0 +1,67 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap'); */
+/* font-family: 'Bungee', cursive;
+font-family: 'Source Sans Pro', sans-serif; */
+
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+@use 'variables';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  display: flex;
+  justify-content: center;
+  max-width: 1920px;
+  margin: 0% auto;
+  color: variables.$dark-color;
+  background-color: variables.$light-color;
+  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    font-size: 40px;
+  }
+}
+
+/*
+* Additional CSS can be defined below or in other CSS files, as per instructions
+*/
+main {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  justify-content: center;
+  background-color: variables.$light-color;
+  margin: 40px;
+
+  @media only screen and (min-width: 1025px) {
+    padding-top: 150px;
+    padding-right: 40px;
+  }
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+}

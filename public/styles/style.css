@@ -1,0 +1,334 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap'); */
+/* font-family: 'Bungee', cursive;
+font-family: 'Source Sans Pro', sans-serif; */
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  display: flex;
+  justify-content: center;
+  max-width: 1920px;
+  margin: 0% auto;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    font-size: 40px;
+  }
+}
+
+/*
+* Additional CSS can be defined below or in other CSS files, as per instructions
+*/
+main {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f4f1ec;
+  margin: 40px;
+}
+@media only screen and (min-width: 1025px) {
+  main {
+    padding-top: 150px;
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  height: 120px;
+  width: 100vw;
+  padding: 20px 1.5em;
+  color: #FFFFFF;
+  transition-property: height;
+  transition-duration: 0.6s;
+}
+nav span {
+  font-family: "Bungee", cursive;
+  font-size: 36px;
+}
+nav i {
+  color: tomato;
+}
+@media only screen and (min-width: 1025px) {
+  nav {
+    border: 1px solid #320872;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2666666667);
+    background: #320872;
+    background: -moz-linear-gradient(top, #320872 0%, #6b32bc 100%);
+    background: -webkit-linear-gradient(top, #320872 0%, #6b32bc 100%);
+    background: linear-gradient(to bottom, #320872 0%, #6b32bc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#320872", endColorstr="#6b32bc", GradientType=0);
+  }
+}
+@media only screen and (max-width: 1024px) {
+  nav {
+    border: none;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+#call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: #f4f1ec;
+  border: none;
+}
+#call-to-action p {
+  margin: 5px;
+}
+#call-to-action i {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+#call-to-action :hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 1921px) {
+  #call-to-action {
+    margin-right: calc((100vw - 1920px) * 0.5);
+  }
+}
+
+.retract {
+  height: 80px;
+  transition-property: height;
+  transition-duration: 0.6s;
+}
+
+@media only screen and (min-width: 1921px) {
+  #dashboard {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  #dashboard {
+    width: 40%;
+    height: 480px;
+    margin: 150px 50px 0px 50px;
+    padding: 50px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #dashboard {
+    width: 100%;
+    height: 520px;
+    padding-top: 120px;
+  }
+}
+#dashboard {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+}
+
+.new-tweet {
+  display: block;
+  min-width: 640px;
+  padding: 20px;
+}
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+.new-tweet label {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+}
+.new-tweet textarea {
+  display: flex;
+  resize: none;
+  align-items: flex-end;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  border: none;
+  border-bottom: 5px solid #545149;
+  margin-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.new-tweet textarea:focus {
+  outline: none;
+}
+.new-tweet footer {
+  display: flex;
+  justify-content: space-between;
+}
+.new-tweet button {
+  font-family: "Bungee", cursive;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  color: #f4f1ec;
+  background: #320872;
+  background: -moz-linear-gradient(top, #320872 0%, #6b32bc 100%);
+  background: -webkit-linear-gradient(top, #320872 0%, #6b32bc 100%);
+  background: linear-gradient(to bottom, #320872 0%, #6b32bc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#320872", endColorstr="#6b32bc", GradientType=0);
+}
+@media only screen and (max-width: 1024px) {
+  .new-tweet button {
+    font-size: 40px;
+    padding: 20px 40px;
+  }
+}
+.new-tweet button:hover {
+  background: #530dbb;
+  background: -moz-linear-gradient(top, #530dbb 0%, #8753d1 100%);
+  background: -webkit-linear-gradient(top, #530dbb 0%, #8753d1 100%);
+  background: linear-gradient(to bottom, #530dbb 0%, #8753d1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#530dbb", endColorstr="#8753d1", GradientType=0);
+}
+.new-tweet button:active {
+  background: #28065c;
+  background: -moz-linear-gradient(top, #28065c 0%, #562896 100%);
+  background: -webkit-linear-gradient(top, #28065c 0%, #562896 100%);
+  background: linear-gradient(to bottom, #28065c 0%, #562896 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#28065c", endColorstr="#562896", GradientType=0);
+}
+.new-tweet output {
+  font-family: "Bungee", cursive;
+}
+
+.red-text {
+  color: tomato;
+}
+
+#post-error {
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  border: 2px dotted darkred;
+  background-color: lightpink;
+  color: darkred;
+}
+
+#post-error p {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.tweet {
+  border: 5px solid #545149;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tweet header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tweet img {
+  max-height: 32px;
+  margin-right: 10px;
+}
+.tweet h3,
+.tweet h4 {
+  margin: 0;
+}
+.tweet p {
+  font-weight: 600;
+  word-break: break-all;
+}
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 5px solid #545149;
+  padding: 10px;
+  font-size: 20px;
+}
+.tweet footer div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.tweet i {
+  color: #320872;
+  margin-left: 10px;
+}
+.tweet i:hover {
+  color: darkgoldenrod;
+}
+.tweet i:active {
+  color: sienna;
+}
+
+.tweet:hover {
+  box-shadow: 5px 10px 2px rgba(102, 51, 238, 0.2666666667);
+}
+
+.heart-counter {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+#go-up {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  background-color: tomato;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 2px 7px 7px rgba(102, 68, 187, 0.5333333333);
+  font-size: 50px;
+}
+@media only screen and (min-width: 1921px) {
+  #go-up {
+    margin-right: calc((100vw - 1920px) * 0.5);
+  }
+}
+
+#go-up:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
