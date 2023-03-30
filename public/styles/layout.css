@@ -23,6 +23,8 @@ html {
  */
 
 body {
+  display: flex;
+  justify-content: center;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -32,11 +34,44 @@ body {
 /*
 * Additional CSS can be defined below or in other CSS files, as per instructions
 */
+
+@media only screen and (min-width: 1921px) {
+  body {
+    margin: 0 20%;
+    font-size: 30px;
+  }
+
+  main {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  main {
+    padding-top: 150px;
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    width: 90%;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    body {
+      font-size: 40px;
+    }
+}
+
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin:auto;
-  width: 90%;
   background-color: #f4f1ec;
- }
+}

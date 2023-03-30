@@ -87,3 +87,10 @@
 .hidden {
   display:none;
 }
+
+@media only screen and (max-width: 1024px) {
+  .new-tweet button {
+    font-size: 40px;
+    padding: 20px 40px;
+  }
+}

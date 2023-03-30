@@ -98,7 +98,7 @@ const loadTweets = function(callback) {
 };
 
 $(document).ready(function() {
-  const COOLDOWN_TIME = 30000;
+  const COOLDOWN_TIME = 10000;
   let coolDown = null;
   const newTweet = $('.new-tweet');
   const postError = $('#post-error');
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
     const tooSoonToTweet = COOLDOWN_TIME - (Date.now() - coolDown);
     if (tooSoonToTweet > 0) {
-      error = `You can only post a new tweet every 30 seconds. Please wait ${Math.ceil(tooSoonToTweet / 1000)} seconds.`;
+      error = `You can only post a new tweet every ${COOLDOWN_TIME / 1000} seconds. Please wait ${Math.ceil(tooSoonToTweet / 1000)} seconds.`;
     }
 
     if (tweetText.length <= 0) {
