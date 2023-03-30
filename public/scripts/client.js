@@ -4,33 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// TO DO: Get rid of this
-// const tweetData = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants."
-//     },
-//     "created_at": 1679860978433
-//   },
-
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis."
-//     },
-//     "created_at": 1679947378433
-//   }
-// ];
-
 /**
  * Takes a tweet object and generates an HTML element formatted as a single tweet
  * to be appended to the webpage
@@ -67,10 +40,6 @@ const createTweetElement = function(tweetObject) {
  */
 const renderTweets = function(data) {
   let tweets = data;
-  // tweets.sort((a, b) => {
-  //   const output = 0 + (b.created_at > a.created_at) - (a.created_at > b.created_at);
-  //   return output;
-  // });
   tweets.forEach(x => {
     $('#tweet-feed').prepend(createTweetElement(x));
   });
@@ -98,7 +67,11 @@ const loadTweets = function(callback) {
 };
 
 $(document).ready(function() {
-  const COOLDOWN_TIME = 10000;
+  /* I implemented a cooldown period to ensure that a user doesn't spam (set to 5 seconds for now).
+   * The amound of cooldown time is dictated in the COOLDOWN_TIME variable and changing it
+   * will dynamically reflect the error message without having to change anything else.
+   */
+  const COOLDOWN_TIME = 5000;
   let coolDown = null;
   const newTweet = $('.new-tweet');
   const postError = $('#post-error');
@@ -140,6 +113,7 @@ $(document).ready(function() {
       .then(() => {
         loadTweets(renderNewTweet);
       });
+
     textBox.val('').trigger('input');
   });
 });

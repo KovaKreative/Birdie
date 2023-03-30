@@ -29,11 +29,6 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  body {
-    font-size: 40px;
-  }
-}
 
 /*
 * Additional CSS can be defined below or in other CSS files, as per instructions
@@ -44,7 +39,7 @@ main {
   flex-direction: column;
   justify-content: center;
   background-color: #f4f1ec;
-  margin: 40px;
+  margin: 2%;
 }
 @media only screen and (min-width: 1025px) {
   main {
@@ -170,7 +165,6 @@ nav i {
 
 .new-tweet {
   display: block;
-  min-width: 640px;
   padding: 20px;
 }
 .new-tweet form {
@@ -281,7 +275,8 @@ nav i {
 }
 .tweet p {
   font-weight: 600;
-  word-break: break-all;
+  display: inline-block;
+  word-break: break-word;
 }
 .tweet footer {
   display: flex;

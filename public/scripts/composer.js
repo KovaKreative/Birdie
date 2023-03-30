@@ -5,7 +5,7 @@ $(document).ready(function() {
   const navButton = $('#call-to-action');
 
   /* 
-   * Hide the slide out elements.
+   * The following three lines hide the slide out elements.
    * Initially, the new tweet element also has a class called 'hidden',
    * which prevents it from momentarily showing up for a split second right when the page loads.
    */
@@ -24,7 +24,7 @@ $(document).ready(function() {
   });
 
   goUpButton.click(() => {
-    $('html, body').animate({ scrollTop: 80 }, 500, 'swing', () => {
+    $('html, body').animate({ scrollTop: 80 }, 500, () => {
       newTweet.slideDown(300, () => {
         newTweet.find('textarea').focus();
       });

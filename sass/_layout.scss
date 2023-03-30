@@ -34,10 +34,7 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 
-  @media (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-    font-size: 40px;
-  }
+
 }
 
 /*
@@ -49,7 +46,7 @@ main {
   flex-direction: column;
   justify-content: center;
   background-color: variables.$light-color;
-  margin: 40px;
+  margin: 2%;
 
   @media only screen and (min-width: 1025px) {
     padding-top: 150px;
