@@ -114,13 +114,14 @@ nav i {
   padding-top: 20px;
   padding-bottom: 0px;
 }
-#call-to-action :hover {
-  cursor: pointer;
-}
 @media only screen and (min-width: 1921px) {
   #call-to-action {
     margin-right: calc((100vw - 1920px) * 0.5);
   }
+}
+
+#call-to-action:hover {
+  cursor: pointer;
 }
 
 .retract {
@@ -156,7 +157,15 @@ nav i {
   align-items: center;
   justify-content: center;
   background-color: goldenrod;
-  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+}
+
+#display-name {
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+}
+#display-name span {
+  font-weight: 300;
 }
 
 .new-tweet {

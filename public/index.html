@@ -37,9 +37,9 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav id="navbar">
-    <span>tweeter</span>
+    <span>Birdie</span>
     <button id="call-to-action">
-        <p><b>Write</b> a new tweet</p>
+        <p><b>Write</b> a new chirp</p>
         <i class="fa-solid fa-angles-down"></i>
     </button>
   </nav>
@@ -48,8 +48,8 @@
       <img src="/images/profile-hex.png">
     </div>
     <br>
-    <div>
-      <h2>Your Name</h2>
+    <div id="display-name">
+      <h2>Eric <span>Kovalevskyy</span></h2>
     </div>
   </header>
   <!-- Page-specific (main) content here -->
@@ -60,10 +60,10 @@
         <p>Error! You suck!</p>
       </div>
       <form id="new-tweet-form" action="/tweets/" method="POST">
-        <label for="tweet-text">What are you humming about?</label>
+        <label for="tweet-text">What's the word, hummingbird?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <footer>
-          <button type="submit">Tweet</button>
+          <button type="submit">Chirp</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </footer>
       </form>

@@ -104,7 +104,7 @@ $(document).ready(function() {
   const postError = $('#post-error');
 
   loadTweets(renderTweets);
-  
+
   newTweet.find('form').submit(function(event) {
     event.preventDefault();
     let error = null;
@@ -113,7 +113,7 @@ $(document).ready(function() {
 
     const tooSoonToTweet = COOLDOWN_TIME - (Date.now() - coolDown);
     if (tooSoonToTweet > 0) {
-      error = `You can only post a new tweet every ${COOLDOWN_TIME / 1000} seconds. Please wait ${Math.ceil(tooSoonToTweet / 1000)} seconds.`;
+      error = `You can only post a new chirp every ${COOLDOWN_TIME / 1000} seconds. Please wait ${Math.ceil(tooSoonToTweet / 1000)} seconds.`;
     }
 
     if (tweetText.length <= 0) {
@@ -138,8 +138,8 @@ $(document).ready(function() {
     const body = $(this).serialize();
     $.ajax('/tweets/', { method: 'POST', data: body })
       .then(() => {
-        textBox.val('').trigger('input');
         loadTweets(renderNewTweet);
       });
+    textBox.val('').trigger('input');
   });
 });

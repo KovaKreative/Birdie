@@ -21,8 +21,6 @@
   }
 }
 
-
-
 #dashboard {
   display: flex;
   flex-grow: 1;
@@ -30,5 +28,14 @@
   align-items: center;
   justify-content: center;
   background-color: goldenrod;
-  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+}
+
+#display-name {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  span {
+    font-weight: 300;
+  }
 }
