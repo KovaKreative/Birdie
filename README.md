@@ -13,7 +13,7 @@ By clicking the arrow on the right side of the navbar, it will reveal a text are
 
 However, since most people would rather do this sort of thing on their tiny mobile devices, Birdie can acommodate smaller screens and devices with a simple but entirely responsive design that will collapse into a single column on smaller screens:
 
-![Desktop View](github-screenshots/mobile-tablet-view.png)
+![Mobile View](github-screenshots/mobile-tablet-view.png)
 
 Despite its simpler appearance, the smaller viewport retains all of its functionality. This responsive front end web-page is a great jumping off point for a new, budding social network.
 
