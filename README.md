@@ -1,6 +1,6 @@
 # Birdie Project
 
-Birdie (a.k.a. Tweeter) is a simple, single-page Twitter clone. Its main goal was front end implementation, built on top of a pre-built backend framework. It uses jQuery, HTML5, and CSS3, and used SASS for preprocessing the CSS.
+Birdie (a.k.a. Tweeter) is a simple, single-page Twitter clone. Its main goal was front end implementation, built on top of a pre-built backend framework. It uses jQuery, HTML5, and CSS3, and used SASS for preprocessing the CSS. This project uses jQuery to great effect to ensure that the entire app is nicely animated and the interactions are responsive and satisfying.
 
 ## At A Glance
 
