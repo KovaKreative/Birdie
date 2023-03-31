@@ -73,16 +73,16 @@ $(document).ready(function() {
    */
   const COOLDOWN_TIME = 5000;
   let coolDown = null;
-  const newTweet = $('.new-tweet');
-  const postError = $('#post-error');
+  const $newTweet = $('.new-tweet');
+  const $postError = $('#post-error');
 
   loadTweets(renderTweets);
 
-  newTweet.find('form').submit(function(event) {
+  $newTweet.find('form').submit(function(event) {
     event.preventDefault();
     let error = null;
-    const textBox = $('#tweet-text');
-    const tweetText = textBox.val();
+    const $textBox = $('#tweet-text');
+    const tweetText = $textBox.val();
 
     const tooSoonToTweet = COOLDOWN_TIME - (Date.now() - coolDown);
     if (tooSoonToTweet > 0) {
@@ -97,12 +97,12 @@ $(document).ready(function() {
       error = "You exceeded your max character allotment. Please shorten your message.";
     }
 
-    postError.slideUp(100, () => {
-      postError.html(`<i class="fa-solid fa-triangle-exclamation"></i> ${error} <i class="fa-solid fa-triangle-exclamation"></i>`);
+    $postError.slideUp(100, () => {
+      $postError.html(`<i class="fa-solid fa-triangle-exclamation"></i> ${error} <i class="fa-solid fa-triangle-exclamation"></i>`);
     });
 
     if (error) {
-      postError.slideDown(200);
+      $postError.slideDown(200);
       return;
     }
 
@@ -114,6 +114,6 @@ $(document).ready(function() {
         loadTweets(renderNewTweet);
       });
 
-    textBox.val('').trigger('input');
+    $textBox.val('').trigger('input');
   });
 });
