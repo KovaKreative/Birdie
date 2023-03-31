@@ -1,20 +1,3 @@
-
-@media only screen and (min-width: 1025px) {
-  #dashboard {
-    height: 480px;
-    margin: 150px 50px 0px 50px;
-    padding: 50px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  #dashboard {
-    width: 100vw;
-    height: 520px;
-    padding-top: 120px;
-  }
-}
-
 #dashboard {
   display: flex;
   flex-grow: 1;
@@ -23,6 +6,18 @@
   justify-content: center;
   background-color: goldenrod;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+
+  @media only screen and (min-width: 1025px) {
+    height: 480px;
+    margin: 150px 50px 0px 50px;
+    padding: 50px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    width: 100vw;
+    height: 520px;
+    padding-top: 120px;
+  }
 }
 
 #display-name {

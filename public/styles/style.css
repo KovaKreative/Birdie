@@ -125,6 +125,15 @@ nav i {
   transition-duration: 0.6s;
 }
 
+#dashboard {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: goldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+}
 @media only screen and (min-width: 1025px) {
   #dashboard {
     height: 480px;
@@ -138,15 +147,6 @@ nav i {
     height: 520px;
     padding-top: 120px;
   }
-}
-#dashboard {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: goldenrod;
-  background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
 }
 
 #display-name {
