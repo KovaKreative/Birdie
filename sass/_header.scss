@@ -1,12 +1,6 @@
-@media only screen and (min-width: 1921px) {
-  #dashboard {
-    width: 30%;
-  }
-}
 
 @media only screen and (min-width: 1025px) {
   #dashboard {
-    width: 40%;
     height: 480px;
     margin: 150px 50px 0px 50px;
     padding: 50px;
@@ -15,7 +9,7 @@
 
 @media only screen and (max-width: 1024px) {
   #dashboard {
-    width: 100%;
+    width: 100vw;
     height: 520px;
     padding-top: 120px;
   }
